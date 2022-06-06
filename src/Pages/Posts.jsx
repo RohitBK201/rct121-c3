@@ -14,6 +14,10 @@ export const Posts = () =>{
 
     console.log(twk,auth)
 
+    const email = localStorage.getItem("email")
+
+    console.log(email)
+
 
 
     const dispatch = useDispatch();
@@ -39,7 +43,7 @@ export const Posts = () =>{
         <div>
             <h1>posts</h1>
 
-            {twk!==null ? <h4>{twk.token}</h4>:""}
+            {twk!==null ? <h4>{twk.token} --- {email}`</h4>:""}
 
             {loading && <div>Loading ...</div>}
             {error && <div>error ...</div>}

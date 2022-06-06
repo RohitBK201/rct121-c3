@@ -45,7 +45,7 @@ export const Home =() =>{
         })
     }
     
-
+    
     return(
     <div>
 
@@ -67,7 +67,10 @@ export const Home =() =>{
             <br/>
             
 
-            <button onClick={()=>{login(eml,pss,dispatch)}}>submit</button>
+            <button onClick={()=>{
+                login(eml,pss,dispatch)
+                localStorage.setItem("email",eml)
+            }}>submit</button>
             
             </div>
 
