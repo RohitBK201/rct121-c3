@@ -2,7 +2,7 @@ import { authActions } from "./action"
 
 const initState = {
 
-    isauth : true,
+    isauth : false,
 
     token : null
 

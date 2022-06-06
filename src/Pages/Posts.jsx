@@ -1,10 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
 import { getuserdata } from "../Redux/app/action";
 
 
 export const Posts = () =>{
+
+    const twk = useSelector(store=>store.ath.token)
+    const auth = useSelector(store=>store.ath.isauth)
+
+    const navigate =useNavigate()
+
+    console.log(twk,auth)
+
 
     const dispatch = useDispatch();
 
@@ -23,13 +32,13 @@ export const Posts = () =>{
     useEffect(()=>{ dispatch( getuserdata(dispatch,pg) ) },[pg])
 
 
-        const twk = useSelector(store=>store.ath.token)
-
-        console.log(twk)
+        
 
     return(
         <div>
             <h1>posts</h1>
+
+            {twk!==null ? <h4>{twk.token}</h4>:""}
 
             {loading && <div>Loading ...</div>}
             {error && <div>error ...</div>}

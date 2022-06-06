@@ -44,8 +44,6 @@ export const Home =() =>{
             dispatch(apifal)
         })
     }
-
-
     
 
     return(
