@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import { Navigate } from "react-router-dom"
 import { Children } from "react"
 
-export const Privaterout = ({Children}) =>{
+export const Privaterout = () =>{
 
     const auth = useSelector(store=>store.ath.isauth)
 
